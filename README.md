@@ -29,7 +29,7 @@ Assert.notEqual(out1, out2);
 - https://github.com/tildeio/htmlbars
 - https://github.com/stevenvachon/handlebars-html-parser
 - https://github.com/SlexAxton/require-handlebars-plugin
-
+- https://github.com/fivetanley/i18nliner-handlebars
 
 # Logic
 - https://github.com/wycats/handlebars.js/issues/616#issuecomment-26661146
