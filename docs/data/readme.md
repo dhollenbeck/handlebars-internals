@@ -15,12 +15,12 @@ template(context, contextConfig);
 
 Topics include:
 - Context Data
-  - [In Expressions](./context#context-data-in-expressions)
-  - [In Parial](./context#context-data-in-partials)
-  - [In Helpers](./context#context-data-in-helpers)
+  - [In Expressions](./context.md#context-data-in-expressions)
+  - [In Parial](./context.md#context-data-in-partials)
+  - [In Helpers](./context.md#context-data-in-helpers)
 - Context Config Data
-  - [In Expressions](./context-config#config-data-in-expressions)
-  - [Data Tracking](./context-config#data-tracking)
+  - [In Expressions](./context-config.md#config-data-in-expressions)
+  - [Data Tracking](./context-config.md#data-tracking)
 - Special Identifiers
-  - [@root](./special#@root)
+  - [@root](./special.md#@root)
 
