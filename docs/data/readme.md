@@ -21,6 +21,11 @@ Topics include:
 - Context Config Data
   - [In Expressions](./context-config.md#config-data-in-expressions)
   - [Data Tracking](./context-config.md#data-tracking)
-- Special Identifiers
-  - [@root](./special.md#@root)
+- Special @data Variables
+  - [@root](http://handlebarsjs.com/reference.html#data-root)
+  - [@first](http://handlebarsjs.com/reference.html#data-first)
+  - [@index](http://handlebarsjs.com/reference.html#data-index)
+  - [@key](http://handlebarsjs.com/reference.html#data-key)
+  - [@last](http://handlebarsjs.com/reference.html#data-last)
+  - [@level](http://handlebarsjs.com/reference.html#data-level)
 

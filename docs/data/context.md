@@ -1,6 +1,6 @@
 # Context Data in Expressions
 
-The nomral way of passing data to Handlebars templates via the compile function. This root data context is accessible from root template context using the Handlebars expression.
+The nomral way of passing data to Handlebars templates via the template function. This data context is accessible from the root template context using the Handlebars expression.
 ```js
 var rootContext = {foo: 'bar'};
 var template = Handlebars.compile('{{foo}}');
