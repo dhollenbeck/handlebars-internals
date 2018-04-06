@@ -2,6 +2,7 @@
 Awesome list for Handlebars.js. Well not really a curation, but really a collection of resources.
 
 # Helpers
+- [188 Helpers](https://github.com/helpers/handlebars-helpers)
 
 # Decorators
 - [Technical Documentation](https://github.com/wycats/handlebars.js/blob/master/docs/decorators-api.md)
