@@ -1,8 +1,5 @@
 # awesome-handlebarsjs
-Awesome list for Handlebars.js. Well not really a curation, but really a collection of resources.
-
-# Helpers
-- [188 Helpers](https://github.com/helpers/handlebars-helpers)
+Awesome list for Handlebars.js internals. Well not really a curation, but really a collection of resources.
 
 # Decorators
 - [Technical Documentation](https://github.com/wycats/handlebars.js/blob/master/docs/decorators-api.md)
@@ -12,6 +9,18 @@ Awesome list for Handlebars.js. Well not really a curation, but really a collect
 # AST
 - [Technical Documentation](https://github.com/wycats/handlebars.js/blob/master/docs/compiler-api.md)
 - [Recursive Node Search Function](https://github.com/SlexAxton/require-handlebars-plugin/blob/master/hbs.js#L224)
+
+# Compiler
+[Unit Tests](https://github.com/wycats/handlebars.js/blob/master/spec/compiler.js)
+
+Form reading unit tests:
+```js
+var html = '{{#if a}}{{/if}}';
+var ast = Handlebars.parse(string);
+var out1 = new Handlebars.compile(ast, {});
+var out2 = new Handlebars.Compiler().compile(ast, {});
+Assert.notEqual(out1, out2);
+```
 
 # Linters
 - https://www.npmjs.com/package/provejs-handlebars
