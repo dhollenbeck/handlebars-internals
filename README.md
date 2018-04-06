@@ -6,6 +6,7 @@ Awesome list for Handlebars.js
 # Decorators
 - [Technical Documentation](https://github.com/wycats/handlebars.js/blob/master/docs/decorators-api.md)
 - [API Documentation](https://handlebarsjs.com/reference.html)
+- [Example](https://github.com/wycats/handlebars.js/blob/master/lib/handlebars/decorators/inline.js)
 
 # Linters
 - https://www.npmjs.com/package/provejs-handlebars
