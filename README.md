@@ -1,5 +1,42 @@
-# awesome-handlebarsjs
-Awesome list for Handlebars.js internals. Well not really a curation, but really a collection of resources.
+# handlebars-internals
+
+The missing Handlbars.js internal documentation.
+
+# Compiler Options
+
+You can compile template like:
+```hs
+var html = '...';
+var options = {...};
+var template = Handlebars.complile(html, options);
+```
+
+The options values are:
+- **data**: Set to false to disable @data tracking.
+- **compat**: Set to true to enable recursive field lookup.
+- **knownHelpers**: Hash containing list of helpers that are known to exist (truthy) at template execution time. Passing this allows the compiler to optimize a number of cases. Builtin helpers are automatically included in this list and may be omitted by setting that value to false.
+- **knownHelpersOnly**: Set to true to allow further optimzations based on the known helpers list.
+- **noEscape**: Set to true to not HTML escape any content.
+- **strict**: Run in strict mode. In this mode, templates will throw rather than silently ignore missing fields. This has the side effect of disabling inverse operations such as {{^foo}}{{/foo}} unless fields are explicitly included in the source object.
+- **assumeObjects**: Removes object existence checks when traversing paths. This is a subset of strict mode that generates optimized templates when the data inputs are known to be safe.
+- **preventIndent**: By default, an indented partial-call causes the output of the whole partial being indented by the same amount. This can lead to unexpected behavior when the partial writes pre-tags. Setting this option to true will disable the auto-indent feature.
+- **ignoreStandalone**: Disables standalone tag removal when set to true. When set, blocks and partials that are on their own line will not remove the whitespace on that line.
+- **explicitPartialContext**: Disables implicit context for partials. When enabled, partials that are not passed a context value will execute against an empty object.
+
+## Compiler Option: Data Tracking
+
+## Compiler Option: Compat
+
+## Compiler Option: KnownHelpers
+
+## Compiler Option: knownHelpersOnly
+
+## Compiler Option: No Escape
+
+## 
+
+# Custom Compiler
+
 
 # Decorators
 - [Technical Documentation](https://github.com/wycats/handlebars.js/blob/master/docs/decorators-api.md)
