@@ -1,5 +1,5 @@
 # awesome-handlebarsjs
-Awesome list for Handlebars.js
+Awesome list for Handlebars.js. Well not really a curation, but really a collection of resources.
 
 # Helpers
 
@@ -13,3 +13,4 @@ Awesome list for Handlebars.js
 
 # Integrations
 - https://github.com/tildeio/htmlbars
+- https://github.com/stevenvachon/handlebars-html-parser
