@@ -20,3 +20,9 @@ Awesome list for Handlebars.js. Well not really a curation, but really a collect
 - https://github.com/tildeio/htmlbars
 - https://github.com/stevenvachon/handlebars-html-parser
 - https://github.com/SlexAxton/require-handlebars-plugin
+
+
+# Logic
+- https://github.com/wycats/handlebars.js/issues/616#issuecomment-26661146
+- https://github.com/wycats/handlebars.js/issues/616#issuecomment-26661146
+- https://gist.github.com/pheuter/3515945
