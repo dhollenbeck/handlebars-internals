@@ -22,6 +22,54 @@ var out2 = new Handlebars.Compiler().compile(ast, {});
 Assert.notEqual(out1, out2);
 ```
 
+```js
+out1: function ret(context, execOptions) {
+    if (!compiled) {
+      compiled = compileInput();
+    }
+    return compiled.call(this, context, execOptions);
+  }
+```
+```js
+out2: { sourceNode: [],
+  opcodes:
+   [ { opcode: 'getContext', args: [Array], loc: [Object] },
+     { opcode: 'lookupOnContext', args: [Array], loc: [Object] },
+     { opcode: 'pushProgram', args: [Array], loc: [Object] },
+     { opcode: 'pushProgram', args: [Array], loc: [Object] },
+     { opcode: 'emptyHash', args: [Array], loc: [Object] },
+     { opcode: 'invokeKnownHelper', args: [Array], loc: [Object] },
+     { opcode: 'append', args: [], loc: [Object] } ],
+  children:
+   [ { sourceNode: [],
+       opcodes: [],
+       children: [],
+       options: [Object],
+       stringParams: undefined,
+       trackIds: undefined,
+       isSimple: false,
+       blockParams: 0 } ],
+  options:
+   { blockParams: [],
+     knownHelpers:
+      { helperMissing: true,
+        blockHelperMissing: true,
+        each: true,
+        if: true,
+        unless: true,
+        with: true,
+        log: true,
+        lookup: true } },
+  stringParams: undefined,
+  trackIds: undefined,
+  guid: 1,
+  usePartial: undefined,
+  useDepths: undefined,
+  isSimple: true,
+  blockParams: 0 }
+``
+
+
 # Linters
 - https://www.npmjs.com/package/provejs-handlebars
 
