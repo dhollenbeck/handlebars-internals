@@ -1,24 +1,23 @@
 # Diagrams
 
-- [Handlebars Workflow](https://mermaidjs.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcbkhUTUwgLS0-IHxtb2RpZnkgcG9pbnR8Zm5jQ29tcGlsZVxuSFRNTCAtLT4gfG1vZGlmeSBwb2ludHxmbmNQcmVjb21waWxlXG5IVE1MIC0tPiB8bW9kaWZ5IHBvaW50fGZuY1ByZWNvbXBpbGVDdXN0b21cbkhUTUwgLS0-fG1vZGlmeSBwb2ludHxmbmNQYXJzZShcIkhhbmRsZWJhcnMucGFyc2UoaHRtbClcIilcbmZuY1BhcnNlIC0tPiBBU1RcbkFTVCAtLT58bW9kaWZ5IHBvaW50fGZuY0NvbXBpbGUoXCJIYW5kbGViYXJzLmNvbXBpbGUoaHRtbHxhc3QpXCIpXG5BU1QgLS0-fG1vZGlmeSBwb2ludHxmbmNQcmVjb21waWxlKFwiSGFuZGxlYmFycy5wcmVjb21waWxlKGFzdClcIilcbkFTVCAtLT58bW9kaWZ5IHBvaW50fGZuY1ByZWNvbXBpbGVDdXN0b20oXCJDdXN0b20ucHJlY29tcGlsZShhc3QpXCIpXG5mbmNDb21waWxlIC0tPiBGW0pTIFRlbXBsYXRlIEZ1bmN0aW9uXVxuRiAtLT4gfGRhdGF8Zm5jVGVtcGxhdGUoXCJ0ZW1wbGF0ZShkYXRhKVwiKVxuZm5jUHJlY29tcGlsZSAtLT4gR1tUZW1wbGF0ZSBTcGVjIFN0cmluZ11cbmZuY1ByZWNvbXBpbGVDdXN0b20gLS0-IEdbVGVtcGxhdGUgU3BlYyBTdHJpbmddXG5HIC0tPnxzdG9yZSBhbmQvb3IgZm9yd2FyZHxmbmNSZXZpdmUoXCJIYW5kbGViYXJzLnRlbXBsYXRlKHNwZWMpXCIpXG5mbmNSZXZpdmUgLS0-SltKUyBUZW1wbGF0ZSBGdW5jdGlvbl1cbkogLS0-IHxkYXRhfGZuY1RlbXBsYXRlKFwidGVtcGxhdGUoZGF0YSlcIilcbmZuY1RlbXBsYXRlIC0tPlJIVE1MW1JlbmRlcmVkIEhUTUxdXG5cbmNsYXNzRGVmIGZuY1N0eWxlIGZpbGw6I2Y5ZixzdHJva2U6IzMzMyxzdHJva2Utd2lkdGg6MXB4O1xuY2xhc3MgZm5jUGFyc2UgZm5jU3R5bGU7XG5jbGFzcyBmbmNDb21waWxlIGZuY1N0eWxlO1xuY2xhc3MgZm5jUHJlY29tcGlsZSBmbmNTdHlsZTtcbmNsYXNzIGZuY1ByZWNvbXBpbGVDdXN0b20gZm5jU3R5bGU7XG5jbGFzcyBmbmNSZXZpdmUgZm5jU3R5bGU7XG5jbGFzcyBmbmNUZW1wbGF0ZSBmbmNTdHlsZTtcbiIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In19)
+- [Handlebars Workflow](https://mermaidjs.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcbkhUTUwgLS0-IHxodG1sIHByZXByb2Nlc3N8Zm5jQ29tcGlsZVxuSFRNTCAtLT4gfGh0bWwgcHJlcHJvY2Vzc3xmbmNQcmVjb21waWxlXG5IVE1MIC0tPiB8aHRtbCBwcmVwcm9jZXNzfGZuY1ByZWNvbXBpbGVDdXN0b21cbkhUTUwgLS0-fGh0bWwgcHJlcHJvY2Vzc3xmbmNQYXJzZShcIkhhbmRsZWJhcnMucGFyc2UoaHRtbClcIilcbmZuY1BhcnNlIC0tPiBBU1RcbkFTVCAtLT58YXN0IHByZXByb2Nlc3N8Zm5jQ29tcGlsZShcIkhhbmRsZWJhcnMuY29tcGlsZShodG1sfGFzdClcIilcbkFTVCAtLT58YXN0IHByZXByb2Nlc3N8Zm5jUHJlY29tcGlsZShcIkhhbmRsZWJhcnMucHJlY29tcGlsZShodG1sfGFzdClcIilcbkFTVCAtLT58YXN0IHByZXByb2Nlc3N8Zm5jUHJlY29tcGlsZUN1c3RvbShcIkN1c3RvbS5wcmVjb21waWxlKGh0bWx8YXN0KVwiKVxuZm5jQ29tcGlsZSAtLT4gRltKUyBUZW1wbGF0ZSBGdW5jdGlvbl1cbkYgLS0-IHxkYXRhfGZuY1RlbXBsYXRlKFwidGVtcGxhdGUoZGF0YSlcIilcbmZuY1ByZWNvbXBpbGUgLS0-IEdbVGVtcGxhdGUgU3BlYyBTdHJpbmddXG5mbmNQcmVjb21waWxlQ3VzdG9tIC0tPiBHW1RlbXBsYXRlIFNwZWMgU3RyaW5nXVxuRyAtLT58c3RvcmUgYW5kL29yIGZvcndhcmR8Zm5jUmV2aXZlKFwiSGFuZGxlYmFycy50ZW1wbGF0ZShzcGVjKVwiKVxuZm5jUmV2aXZlIC0tPkZbSlMgVGVtcGxhdGUgRnVuY3Rpb25dXG5mbmNUZW1wbGF0ZSAtLT5SSFRNTFtSZW5kZXJlZCBIVE1MXVxuXG5jbGFzc0RlZiBmbmNTdHlsZSBmaWxsOiNmOWYsc3Ryb2tlOiMzMzMsc3Ryb2tlLXdpZHRoOjFweDtcbmNsYXNzIGZuY1BhcnNlIGZuY1N0eWxlO1xuY2xhc3MgZm5jQ29tcGlsZSBmbmNTdHlsZTtcbmNsYXNzIGZuY1ByZWNvbXBpbGUgZm5jU3R5bGU7XG5jbGFzcyBmbmNQcmVjb21waWxlQ3VzdG9tIGZuY1N0eWxlO1xuY2xhc3MgZm5jUmV2aXZlIGZuY1N0eWxlO1xuY2xhc3MgZm5jVGVtcGxhdGUgZm5jU3R5bGU7XG4iLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9fQ)
 
 ```mermaid
 graph TD
-HTML --> |modify point|fncCompile
-HTML --> |modify point|fncPrecompile
-HTML --> |modify point|fncPrecompileCustom
-HTML -->|modify point|fncParse("Handlebars.parse(html)")
+HTML --> |html preprocess|fncCompile
+HTML --> |html preprocess|fncPrecompile
+HTML --> |html preprocess|fncPrecompileCustom
+HTML -->|html preprocess|fncParse("Handlebars.parse(html)")
 fncParse --> AST
-AST -->|modify point|fncCompile("Handlebars.compile(html|ast)")
-AST -->|modify point|fncPrecompile("Handlebars.precompile(ast)")
-AST -->|modify point|fncPrecompileCustom("Custom.precompile(ast)")
+AST -->|ast preprocess|fncCompile("Handlebars.compile(html|ast)")
+AST -->|ast preprocess|fncPrecompile("Handlebars.precompile(html|ast)")
+AST -->|ast preprocess|fncPrecompileCustom("Custom.precompile(html|ast)")
 fncCompile --> F[JS Template Function]
 F --> |data|fncTemplate("template(data)")
 fncPrecompile --> G[Template Spec String]
 fncPrecompileCustom --> G[Template Spec String]
 G -->|store and/or forward|fncRevive("Handlebars.template(spec)")
-fncRevive -->J[JS Template Function]
-J --> |data|fncTemplate("template(data)")
+fncRevive -->F[JS Template Function]
 fncTemplate -->RHTML[Rendered HTML]
 
 classDef fncStyle fill:#f9f,stroke:#333,stroke-width:1px;
@@ -28,4 +27,6 @@ class fncPrecompile fncStyle;
 class fncPrecompileCustom fncStyle;
 class fncRevive fncStyle;
 class fncTemplate fncStyle;
+
+
 ```
