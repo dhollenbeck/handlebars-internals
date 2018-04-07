@@ -3,6 +3,7 @@
 The purpose of precompiling the templates is improve performance during execution (normally in the browser). There are many integrations of Handlebars with existing web frameworks. Consider using on of these existing interations before coding your own:
 
 - [Express.js Handlebars](https://github.com/ericf/express-handlebars)
+- https://github.com/pcardune/handlebars-loader
 
 # Example Web Server Workflow
 
