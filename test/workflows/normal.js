@@ -9,15 +9,15 @@ function revive(specStr) {
 	return new Function('return ' + specStr)();
 }
 
-describe.only('Handbars Workflows', function () {
-	it('HTML --> compile() --> RHTML ', function() {
+describe('Handbars Workflows', function () {
+	it('(1) HTML --> compile() --> RHTML ', function() {
 		var html = '{{name}}';
 		var context = {name: 'Dan'};
 		var template = Handlebars.compile(html);
 		var rhtml = template(context);
 		Assert.equal(rhtml, 'Dan');
 	});
-	it('HTML --> precompile() --> revive() --> template() --> RHTML', function() {
+	it('(2) HTML --> precompile() --> revive() --> template() --> RHTML', function() {
 		var html = '{{name}}';
 		var context = {name: 'Dan'};
 		var specStr = Handlebars.precompile(html);
@@ -29,7 +29,7 @@ describe.only('Handbars Workflows', function () {
 		Assert.equal(typeof specStr, 'string');
 		Assert.equal(typeof specObj, 'object');
 	});
-	it('HTML --> parse() --> compile() --> template() --> RHTML', function() {
+	it('(3) HTML --> parse() --> compile() --> template() --> RHTML', function() {
 		var html = '{{name}}';
 		var context = {name: 'Dan'};
 		var ast = Handlebars.parse(html);
@@ -39,30 +39,7 @@ describe.only('Handbars Workflows', function () {
 		Assert.equal(rhtml, 'Dan');
 		Assert.equal(typeof ast, 'object');
 	});
-	it('HTML --> parse() --> compile() --> template() --> RHTML', function() {
-		var html = '{{name}}';
-		var context = {name: 'Dan'};
-		var ast = Handlebars.parse(html);
-		var template = Handlebars.compile(ast);
-		var rhtml = template(context);
-
-		Assert.equal(rhtml, 'Dan');
-		Assert.equal(typeof ast, 'object');
-	});
-	it('HTML --> parse() --> precompile() --> revive() --> template() --> RHTML', function() {
-		var html = '{{name}}';
-		var context = {name: 'Dan'};
-		var ast = Handlebars.parse(html);
-		var specStr = Handlebars.precompile(ast);
-		var specObj = revive(specStr);
-		var template = Handlebars.template(specObj);
-		var rhtml = template(context);
-
-		Assert.equal(rhtml, 'Dan');
-		Assert.equal(typeof specStr, 'string');
-		Assert.equal(typeof specObj, 'object');
-	});
-	it('HTML --> parse() --> precompile() --> revive() --> template() --> RHTML', function() {
+	it('(4) HTML --> parse() --> precompile() --> revive() --> template() --> RHTML', function() {
 		var html = '{{name}}';
 		var context = {name: 'Dan'};
 		var ast = Handlebars.parse(html);
