@@ -1,6 +1,6 @@
 # handlebars-internals
 
-The missing Handlbars.js internal documentation.
+A study of the internals of Handlbars.js.
 
 - [Passing Data](./docs/data.md)
 - [Handlebars Compilers](./docs/compilers.md)
