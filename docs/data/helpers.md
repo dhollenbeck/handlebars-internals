@@ -1,6 +1,6 @@
 # Helper Data
 
-# Data Context
+# Context Data
 Inside the helper functions `this` is set to the current data context.
 
 ```hbs
