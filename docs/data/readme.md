@@ -28,4 +28,6 @@ Topics include:
   - [@key](http://handlebarsjs.com/reference.html#data-key)
   - [@last](http://handlebarsjs.com/reference.html#data-last)
   - [@level](http://handlebarsjs.com/reference.html#data-level)
+- Custom Special @data Variables
+  - [Block Helpers](./special.md)
 
