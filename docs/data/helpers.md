@@ -3,7 +3,7 @@
 # Context Data
 Inside the helper functions `this` is set to the current data context.
 
-```hbs
+```js
 Handlebars.registerHelper('helper', function (options) {
 	var context = this;
 	return context.foo;
@@ -17,17 +17,11 @@ template(rootContext); // => bar
 
 You can create a block helper which scopes your custom special data.
 
-```hbs
+```js
 Handlebars.registerHelper('outer', function (options) {
-	var ret = '', data;
-	var context = this;
-	if (options.data) {
-		data = Handlebars.createFrame(options.data);
-		data.foo = 'bar'; // <--- set special data property
-		options.data = data;
-	}
-	ret = options.fn(context, {data: data});
-	return ret;
+	var data = Handlebars.createFrame(options.data);
+	data.foo = 'bar'; // <--- set special data property
+	return options.fn(this, {data: data});
 });
 var rootContext = {};
 var template = Handlebars.compile('{{#outer}}{{@foo}}{{/outer}}');
@@ -39,18 +33,12 @@ template(rootContext); // => bar
 You can pass special data between an outer block helper to inner helper.
 ```js
 Handlebars.registerHelper('outer', function (options) {
-	var ret = '', data;
-	var context = this;
-	if (options.data) {
-		data = Handlebars.createFrame(options.data);
-		data.foo = 'bar';
-		options.data = data;
-	}
-	ret = options.fn(context, {data: data});
-	return ret;
+	var data = Handlebars.createFrame(options.data);
+	data.foo = 'bar'; // <--- set special data property
+	return options.fn(this, {data: data});
 });
 Handlebars.registerHelper('inner', function (options) {
-	return options.data.foo;
+	return options.data.foo; // <--- access special data property
 });
 var rootContext = {};
 var template = Handlebars.compile('{{#outer}}{{inner}}{{/outer}}');
