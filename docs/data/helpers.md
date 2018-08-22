@@ -23,3 +23,23 @@ template(rootContext); // => bar
 
 # Passing Data Between Nested Helpers
 
+You can pass special data between an outer block helper to inner helper.
+```js
+Handlebars.registerHelper('outer', function (options) {
+	var ret = '', data;
+	var context = this;
+	if (options.data) {
+		data = Handlebars.createFrame(options.data);
+		data.foo = 'bar';
+		options.data = data;
+	}
+	ret = options.fn(context, {data: data});
+	return ret;
+});
+Handlebars.registerHelper('inner', function (options) {
+	return options.data.foo;
+});
+var rootContext = {};
+var template = Handlebars.compile('{{#outer}}{{inner}}{{/outer}}');
+template(rootContext); // => bar
+```
