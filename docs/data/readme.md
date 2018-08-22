@@ -22,6 +22,7 @@ Topics include:
   - [In Expressions](./context-config.md#config-data-in-expressions)
   - [Data Tracking](./context-config.md#data-tracking)
 - Helper Data
+  - [Context Data] (helpers.md#context-data)
   - [Scoped Special @data](./special.md#scoped)
 - Special @data Variables
   - [@root](http://handlebarsjs.com/reference.html#data-root)
