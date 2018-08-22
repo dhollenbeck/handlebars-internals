@@ -1,5 +1,18 @@
 # Helper Data
 
+# Data Context
+Inside the helper functions `this` is set to the current data context.
+
+```hbs
+Handlebars.registerHelper('helper', function (options) {
+	var context = this;
+	return context.foo;
+});
+var rootContext = {foo: 'bar'};
+var template = Handlebars.compile('{{helper}}');
+template(rootContext); // => bar
+```
+
 # Scoped Custom Special Data Identifiers
 
 You can create a block helper which scopes your custom special data.
