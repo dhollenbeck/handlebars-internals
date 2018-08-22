@@ -21,6 +21,8 @@ Topics include:
 - Context Config Data
   - [In Expressions](./context-config.md#config-data-in-expressions)
   - [Data Tracking](./context-config.md#data-tracking)
+- Helper Data
+  - [Scoped Special @data](./special.md#scoped)
 - Special @data Variables
   - [@root](http://handlebarsjs.com/reference.html#data-root)
   - [@first](http://handlebarsjs.com/reference.html#data-first)
@@ -28,6 +30,4 @@ Topics include:
   - [@key](http://handlebarsjs.com/reference.html#data-key)
   - [@last](http://handlebarsjs.com/reference.html#data-last)
   - [@level](http://handlebarsjs.com/reference.html#data-level)
-- Custom Special @data Variables
-  - [Block Helpers](./special.md)
 
