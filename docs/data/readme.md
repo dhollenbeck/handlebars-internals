@@ -23,7 +23,7 @@ Topics include:
   - [In Parial](./context.md#context-data-in-partials)
   - [In Helpers](./context.md#context-data-in-helpers)
 - Config Data
-  - [In Expressions](./context-config.md#config-data-in-expressions)
+  - [In Expressions](./config.md#config-data-in-expressions)
   - [Data Tracking](./context-config.md#data-tracking)
 - Helper Data
   - [Context Data] (helpers.md#context-data)
