@@ -11,7 +11,8 @@ There are many different Handlebars data:
 ```js
 var context = {foo: 'bar'};
 var config = {data:{feature: true}};
-var template = Handlebars.compile('{{foo}}');
+var options = {};
+var template = Handlebars.compile('{{foo}}', options);
 template(context, config);
 ```
 
