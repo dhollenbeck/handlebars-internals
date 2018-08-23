@@ -3,16 +3,17 @@
 >This is a study of passing data to Handlebars templates and how to access that data from the templates and from inside of helper functions.
 
 There are many different Handlebars data:
-- **Context:** Is data passed into the template function as the first parameter.
-- **Config:** Is data passed into the template function as the second parameter.
-- **Special:** Is the data created by handlebars helpers and accessed via the `@` prefix.
-- **Options:** Is the compiler options.
+- **Context:** refers to the data passed into the template function as the first parameter.
+- **Config:** refers to data passed into the template function as the second parameter.
+- **Special:** refers to the data created by handlebars helpers and accessed via the `@` prefix.
+- **Settings:** refers to the compiler options.
+- **Options:** refers to the last argument of any helper function.
 
 ```js
 var context = {foo: 'bar'};
 var config = {data:{feature: true}};
-var options = {};
-var template = Handlebars.compile('{{foo}}', options);
+var settings = {};
+var template = Handlebars.compile('{{foo}}', settings);
 template(context, config);
 ```
 
