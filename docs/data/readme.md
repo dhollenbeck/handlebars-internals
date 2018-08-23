@@ -4,13 +4,13 @@
 
 There are two ways to pass data into Handlebars templates:
 - Context: Is data passed into the template function as the first parameter.
-- Context Config: Is data passed into the template function as the second parameter.
+- Config: Is data passed into the template function as the second parameter.
 
 ```js
 var context = {foo: 'bar'};
-var contextConfig = {data:{feature: true}};
+var config = {data:{feature: true}};
 var template = Handlebars.compile('{{foo}}');
-template(context, contextConfig);
+template(context, config);
 ```
 
 Topics include:
@@ -18,7 +18,7 @@ Topics include:
   - [In Expressions](./context.md#context-data-in-expressions)
   - [In Parial](./context.md#context-data-in-partials)
   - [In Helpers](./context.md#context-data-in-helpers)
-- Context Config Data
+- Config Data
   - [In Expressions](./context-config.md#config-data-in-expressions)
   - [Data Tracking](./context-config.md#data-tracking)
 - Helper Data
