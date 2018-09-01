@@ -10,7 +10,7 @@ var template = Handlebars.complile(html, options);
 ```
 
 The options values are:
-- **data** (boolean): Defaults to true. Set to false to disable special @data variable tracking.
+- **data** (boolean): Defaults to true. Set to false to disable private @data variable tracking.
 
 - **compat** (boolean): Set to true to enable recursive field lookup. Handlebars deviates from Mustache slightly in that it does not perform recursive lookup by default. The compile time `compat` flag must be set to enable this functionality. Users should note that there is a performance cost for enabling this flag. The exact cost varies by template, but it's recommended that performance sensitive operations should avoid this mode and instead opt for explicit path references.
 

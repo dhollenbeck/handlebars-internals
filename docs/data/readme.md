@@ -5,7 +5,7 @@
 There are many different Handlebars data:
 - **Context:** refers to the data passed into the template function as the first parameter.
 - **Config:** refers to data passed into the template function as the second parameter.
-- **Special:** refers to the data created by handlebars helpers and accessed via the `@` prefix.
+- **Private:** refers to the data created by handlebars helpers and accessed via the `@` prefix.
 - **Settings:** refers to the compiler options.
 - **Options:** refers to the last argument of any helper function.
 
@@ -27,8 +27,8 @@ Topics include:
   - [Data Tracking](./context-config.md#data-tracking)
 - Helper Data
   - [Context Data] (helpers.md#context-data)
-  - [Scoped Special @data](./special.md#scoped)
-- Special @data Variables
+  - [Scoped Private @data](./helpers.md#scoped)
+- Private @data Variables
   - [@root](http://handlebarsjs.com/reference.html#data-root)
   - [@first](http://handlebarsjs.com/reference.html#data-first)
   - [@index](http://handlebarsjs.com/reference.html#data-index)

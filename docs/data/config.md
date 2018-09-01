@@ -10,7 +10,7 @@ var template = Handlebars.compile('{{foo}}');
 template(context, config); // => ''
 ```
 
-However, you can access config data via the special '@' identifier.
+However, you can access config data via the private '@' identifier.
 
 ```js
 var context = {};
@@ -30,7 +30,7 @@ You can access config data via helper params and partials as well.
 
 # Config Data in Partials
 
-You can access config data using the special '@' identifier regardless of the context.
+You can access config data using the private '@' identifier regardless of the context.
 
 ```js
 Handlebars.registerPartial('partial', '{{@feature}},');
