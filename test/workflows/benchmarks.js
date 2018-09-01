@@ -28,15 +28,15 @@ var spec = Handlebars.precompile(html);
 // HTML: 464 seconds, 21 renderings/second, 350 pages/second
 // SPEC: 15 seconds, 666 renderings/second, 11,100 pages/second
 
-describe.only('Handbars Workflows Benchmarks', function () {
+describe.skip('Handbars Workflows Benchmarks', function () {
 	this.timeout(0)
-	it.only('(1) HTML --> compile() --> RHTML ', function() {
+	it('(1) HTML --> compile() --> RHTML ', function() {
 		for (var i = 0; i < max; i++) {
 			var template = Handlebars.compile(html);
 			var rhtml = template(context);
 		}
 	});
-	it.only('(2) SPEC --> revive() --> template() --> RHTML', function() {
+	it('(2) SPEC --> revive() --> template() --> RHTML', function() {
 		for (var i = 0; i < max; i++) {
 			var template = Handlebars.template(revive(spec));
 			var rhtml = template(context);

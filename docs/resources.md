@@ -27,7 +27,7 @@ Resources outside of this repo.
 - https://github.com/SlexAxton/require-handlebars-plugin
 - https://github.com/fivetanley/i18nliner-handlebars
 - [synchronous and asynchronous loading handlebars templates](https://gist.github.com/utsengar/2287070)
-- https://github.com/guard/guard-steering
+- [Handlebars.js Ruby precompiler wrapper](https://github.com/guard/guard-steering)
 
 # Logic
 - https://github.com/wycats/handlebars.js/issues/616#issuecomment-26661146
