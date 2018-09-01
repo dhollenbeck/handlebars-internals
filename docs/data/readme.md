@@ -2,15 +2,19 @@
 
 >This is a study of passing data to Handlebars templates and how to access that data from the templates and from inside of helper functions.
 
-There are two ways to pass data into Handlebars templates:
-- Context: Is data passed into the template function as the first parameter.
-- Context Config: Is data passed into the template function as the second parameter.
+There are many different Handlebars data:
+- **Context:** refers to the data passed into the template function as the first parameter.
+- **Config:** refers to data passed into the template function as the second parameter.
+- **Special:** refers to the data created by handlebars helpers and accessed via the `@` prefix.
+- **Settings:** refers to the compiler options.
+- **Options:** refers to the last argument of any helper function.
 
 ```js
 var context = {foo: 'bar'};
-var contextConfig = {data:{feature: true}};
-var template = Handlebars.compile('{{foo}}');
-template(context, contextConfig);
+var config = {data:{feature: true}};
+var settings = {};
+var template = Handlebars.compile('{{foo}}', settings);
+template(context, config);
 ```
 
 Topics include:
@@ -18,9 +22,12 @@ Topics include:
   - [In Expressions](./context.md#context-data-in-expressions)
   - [In Parial](./context.md#context-data-in-partials)
   - [In Helpers](./context.md#context-data-in-helpers)
-- Context Config Data
-  - [In Expressions](./context-config.md#config-data-in-expressions)
+- Config Data
+  - [In Expressions](./config.md#config-data-in-expressions)
   - [Data Tracking](./context-config.md#data-tracking)
+- Helper Data
+  - [Context Data] (helpers.md#context-data)
+  - [Scoped Special @data](./special.md#scoped)
 - Special @data Variables
   - [@root](http://handlebarsjs.com/reference.html#data-root)
   - [@first](http://handlebarsjs.com/reference.html#data-first)
