@@ -68,7 +68,7 @@ describe('Handbars Workflows - private helpers', function () {
 });
 
 describe.only('Handbars Workflows - private helpers in partial', function () {
-	it('(1) HTML --> compile() --> RHTML ', function() {
+	it.only('(1) HTML --> compile() --> RHTML ', function() {
 		var html = '{{> partial}}';
 		var context = {name: 'Dan'};
 		var template = Handlebars.compile(html);
