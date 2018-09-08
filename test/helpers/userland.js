@@ -92,6 +92,31 @@ describe('Handbars Helpers - private helpers from userland (unsafe & sandboxed)'
 		}
 		Assert.equal(err.toString(), 'Error: Infinite loop detected - reached max iterations');
 	});
+	it('could be sandboxed and protect against evil code (again)', function() {
+		var err;
 
+		// parse userland submitted function to get args and code
+		var evilargs = ['a', 'b'];
+		var evilcode = ['while(true) {}; return "never";'];
+
+		// build sandboxed helper
+		var args = ['hbs'].concat(evilargs).concat(evilcode);
+		var untrusted = safeEval.Function.apply(this, args).bind(undefined, hbs);
+
+		// register sandboxed private helper
+		var config = {helpers: {untrustedPrivateHelper: untrusted}};
+
+		// template execution
+		var html = '{{untrustedPrivateHelper a b}}';
+		var context = {a: 1, b: 2};
+		var template = hbs.compile(html);
+		try {
+			template(context, config);
+		} catch (e) {
+			err = e;
+		}
+		Assert.equal(err.toString(), 'Error: Infinite loop detected - reached max iterations');
+	});
+//add.apply(this, [1, 2])
 
 });
