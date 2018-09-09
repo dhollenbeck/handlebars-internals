@@ -4,17 +4,11 @@ var Assert = require('assert');
 var Handlebars = require('handlebars');
 var VM = require('vm2').VM;
 var NodeVM = require('vm2').NodeVM;
-
 var Konsole = require('@ravdocs/console');
-
 var stdout = Konsole.hook(function (output, obj) {
 	output.str += obj.str;
 }, process.stdout);
 
-
-function toHelper(str) {
-	return Function('"use strict";return ' + str)();
-}
 
 describe('Handbars Helpers - private helpers from userland (vm2)', function () {
 
@@ -36,9 +30,9 @@ describe('Handbars Helpers - private helpers from userland (vm2)', function () {
 		return args[args.length - 1];
 	}
 
-	it.only('could be sandboxed by and allow us to define environment (vm2.VM)', function() {
+	it.only('should be sandboxed with defined environment (vm2.VM)', function() {
 
-		// given the following userland function data
+		// given the following userland function args and function string
 		// notice the lack of return statement in the code
 		var args = ['a','b'];
 		var code = 'var x = 23;\n x + a + b;';
@@ -67,8 +61,9 @@ describe('Handbars Helpers - private helpers from userland (vm2)', function () {
 		Assert.equal(rhtml, '26');
 	});
 
-	it.only('could be sandboxed by and allow us to define environment (vm2.NodeVM)', function() {
-		// given the following userland function data
+	it.only('should be sandboxed with defined environment (vm2.NodeVM)', function() {
+
+		// given the following userland function string
 		var code = 'function helper(a, b, options) {var x = 23;\nreturn x + a + b;}';
 
 		// define virtual machine
@@ -89,8 +84,9 @@ describe('Handbars Helpers - private helpers from userland (vm2)', function () {
 		Assert.equal(rhtml, '26');
 	});
 
-	it.only('could be sandboxed by and allow us to define environment (vm2.NodeVM) and capture stdout', function() {
-		// given the following userland function data
+	it.only('should be sandboxed with defined environment and capture stdout (vm2.NodeVM)', function() {
+
+		// given the following userland function string
 		var code = 'function helper(a, b, options) {var x = 23;\nconsole.log("teapot");\nreturn x + a + b;}';
 
 		// define virtual machine
