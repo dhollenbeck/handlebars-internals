@@ -8,7 +8,7 @@ function toHelper(str) {
 	return Function('"use strict";return ' + str)();
 }
 
-describe('Handbars Helpers - private helpers from userland (unsafe & sandboxed)', function () {
+describe('Handbars Helpers - private helpers from userland (notevil)', function () {
 
 	var hbs;
 
@@ -100,8 +100,8 @@ describe('Handbars Helpers - private helpers from userland (unsafe & sandboxed)'
 		var evilcode = ['while(true) {}; return "never";'];
 
 		// build sandboxed helper
-		var args = ['hbs'].concat(evilargs).concat(evilcode);
-		var untrusted = safeEval.Function.apply(this, args).bind(undefined, hbs);
+		var args = ['hbs', 'console'].concat(evilargs).concat(evilcode);
+		var untrusted = safeEval.Function.apply(this, args).bind(undefined, hbs, console);
 
 		// register sandboxed private helper
 		var config = {helpers: {untrustedPrivateHelper: untrusted}};
@@ -117,6 +117,25 @@ describe('Handbars Helpers - private helpers from userland (unsafe & sandboxed)'
 		}
 		Assert.equal(err.toString(), 'Error: Infinite loop detected - reached max iterations');
 	});
-//add.apply(this, [1, 2])
+	it('could be sandboxed and protect against evil code (can call console.log)', function() {
+		var err;
 
+		// parse userland submitted function to get args and code
+		var evilargs = ['a', 'b'];
+		var evilcode = ['console.log(a); return b;'];
+
+		// build sandboxed helper
+		var args = ['hbs', 'console'].concat(evilargs).concat(evilcode);
+		var untrusted = safeEval.Function.apply(this, args).bind(undefined, hbs, console);
+
+		// register sandboxed private helper
+		var config = {helpers: {untrustedPrivateHelper: untrusted}};
+
+		// template execution
+		var html = '{{untrustedPrivateHelper a b}}';
+		var context = {a: 1, b: 2};
+		var template = hbs.compile(html);
+		var output = template(context, config);
+		Assert.equal(output, 2);
+	});
 });
