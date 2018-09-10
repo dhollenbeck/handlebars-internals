@@ -3,11 +3,6 @@
 var Assert = require('assert');
 var Handlebars = require('handlebars');
 var VM = require('vm2').VM;
-var Konsole = require('@ravdocs/console');
-var stdout = Konsole.hook(function (output, obj) {
-	output.str += obj.str;
-}, process.stdout);
-
 
 describe('Handbars Helpers - private helpers running in (vm2.VM)', function () {
 
@@ -309,5 +304,10 @@ describe('Handbars Helpers - private helpers running in (vm2.VM)', function () {
 		var actual = template(context, config);
 		Assert.equal(actual, '256');
 	});
-	it('will not generate memory leak as tested by `leakage`');
+	it.skip('will not generate memory leak as tested by `leakage`', function () {
+		// require('leakage').iterate(() => {
+		// 	const instance = myLib.createInstance()
+		// 	instance.doStuff('foo', 'bar')
+		// });
+	});
 });
