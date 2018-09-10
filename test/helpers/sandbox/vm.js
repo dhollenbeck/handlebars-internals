@@ -9,7 +9,7 @@ var stdout = Konsole.hook(function (output, obj) {
 }, process.stdout);
 
 
-describe.only('Handbars Helpers - private helpers running in (vm2.VM)', function () {
+describe('Handbars Helpers - private helpers running in (vm2.VM)', function () {
 
 	var hbs;
 
@@ -160,6 +160,67 @@ describe.only('Handbars Helpers - private helpers running in (vm2.VM)', function
 		template = hbs.compile(html);
 		actual = template(context, config);
 		Assert.equal(actual, 'false');
+	});
+	it('will be able to get hash parameters', function() {
+
+		// given the following userland function args and function string
+		// notice the lack of return statement in the code
+		var args = ['a', 'options'];
+		var code = 'options.hash.foo;';
+
+		// build the vm2 helper
+		var helper = function () {
+
+			// build global object
+			var sandbox = toSandbox(args, arguments);
+			sandbox.options = toOptions(arguments);
+
+			var vm = new VM({
+				timeout: 1000,
+				sandbox: sandbox
+			});
+
+			return vm.run(code);
+		};
+		var config = {helpers: {helper: helper}};
+
+		// true
+		var html = "{{helper foo=foo}}";
+		var context = {foo: 'bar'};
+		var template = hbs.compile(html);
+		var actual = template(context, config);
+		Assert.equal(actual, 'bar');
+	});
+	it('will be able to escape outputs', function() {
+
+		// given the following userland function args and function string
+		// notice the lack of return statement in the code
+		var args = [];
+		var code = 'escape("<b>teapot</b>")';
+
+		// build the vm2 helper
+		var helper = function () {
+
+			// build global object
+			var sandbox = toSandbox(args, arguments);
+			sandbox.options = toOptions(arguments);
+			sandbox.escape = function (str) {
+				return hbs.escapeExpression(str);
+			}
+
+			var vm = new VM({
+				timeout: 1000,
+				sandbox: sandbox
+			});
+
+			return vm.run(code);
+		};
+		var config = {helpers: {helper: helper}};
+		var html = "{{helper}}";
+		var context = {};
+		var template = hbs.compile(html);
+		var actual = template(context, config);
+		Assert.equal(actual, '&amp;lt;b&amp;gt;teapot&amp;lt;/b&amp;gt;');
 	});
 	it('will setting timeout to protect against `while(true){}` syle attacks', function() {
 
