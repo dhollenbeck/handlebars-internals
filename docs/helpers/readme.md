@@ -1,12 +1,12 @@
 # Helpers
 
-Helpers come in two types:
-- Inline Expression Helpers (`{{myHelper foo}}`)
-- Block Expression Helpers (`{{#myHelper foo}}...{{/myHelper}}`)
+Helpers have two **expressions**:
+- **Inline Expression**: `{{myHelper foo}}`
+- **Block Expression**: `{{#myHelper foo}}...{{/myHelper}}`
 
-Helpers can have two visability:
-- Global Helpers: registered via Handlebars.registerHelper() and is visible to all templates and partials.
-- Private Helplers: registered via template execution config and is visible to current template and all sub partials.
+Helpers have two scopes:
+- **Global Scope**: registered via Handlebars.registerHelper() and is visible to all templates and partials.
+- **Private Scope**: registered via template execution config and is visible to current template and all sub partials.
 
 # Example Register Global Inline Helper
 ```js
